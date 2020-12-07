@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="bs/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bs/js/bootstrap.js"></script> 
 	<link href="css/book/head_footer.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/book/getCatalog.js"></script> 
+	<script type="text/javascript" src="js/book/getCatalog.js"></script>
 	<script type="text/javascript" src="js/book/index.js"  charset="UTF-8"></script>
 	<script type="text/javascript" src="js/book/landing.js"></script>
 	<link rel="stylesheet" href="css/book/index.css" />

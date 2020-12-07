@@ -28,7 +28,8 @@ public class GetCatalog extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/json"); 
+		response.setContentType("text/json");
+		response.setCharacterEncoding("utf-8");
 		JSONObject json = new JSONObject();
 		CatalogDao cd=new CatalogDaoImpl();
 		BookDao bd=new BookDaoImpl();

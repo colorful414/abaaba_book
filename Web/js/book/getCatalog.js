@@ -3,7 +3,8 @@ $.ajax({
 	dataType:"json",
 	async:true,
 	data:{},
-	type:"POST",
+	type:"GET",
+	scriptCharset: 'utf-8',
 	success:function(data){
 		//分类信息
 		if(data.catalog!=null){
