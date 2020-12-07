@@ -1,6 +1,7 @@
 package com.abaaba.book.servlet.book;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -30,7 +31,9 @@ public class GetCatalog extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/json");
 		response.setCharacterEncoding("utf-8");
+
 		JSONObject json = new JSONObject();
+
 		CatalogDao cd=new CatalogDaoImpl();
 		BookDao bd=new BookDaoImpl();
 		List<Catalog> catalog = cd.getCatalog();
@@ -42,7 +45,10 @@ public class GetCatalog extends HttpServlet {
 			c.setCatalogSize(size);
 		}
 		json.put("catalog", catalog);
-		response.getWriter().append(json.toString());
+//		response.getWriter().append(json.toString());
+		PrintWriter pw = response.getWriter();
+		pw.print(json.toString());
+		pw.flush();
 	}
 
 	/**

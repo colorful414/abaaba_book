@@ -13,7 +13,7 @@
 <head>
 	<base href="${basePath}">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>购物车</title>
+	<title>${title}类图书列表</title>
 	<link rel="stylesheet" href="bs/css/bootstrap.css">
 	<script type="text/javascript" src="bs/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bs/js/bootstrap.js"></script> 
