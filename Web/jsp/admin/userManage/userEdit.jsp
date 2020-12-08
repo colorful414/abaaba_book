@@ -73,7 +73,7 @@
 						</c:when>
 						<c:otherwise>
 							<label class="radio-inline">
-								<input type="radio" name="sex" id="sex" class="pr1" value="男">男
+								<input type="radio" name="sex" id="sex1" class="pr1" value="男">男
 							</label>
 							<label class="radio-inline">
 								<input type="radio" name="sex" checked="checked"  class="pr1"  value="女">女

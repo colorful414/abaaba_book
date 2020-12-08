@@ -26,8 +26,8 @@ public class UserManageServlet extends HttpServlet {
 	private static final String USERLIST_PATH="userManage/userList.jsp";//用户列表页面地址
 	private static final String USERADD_PATH="userManage/userAdd.jsp";//用户增加页面地址
 	private static final String USEREDIT_PATH="userManage/userEdit.jsp";//用户修改页面地址
-	private static final String USERDETAIL_PATH="userManage/userDetail.jsp";//用户修改页面地址
-	   
+	private static final String USERDETAIL_PATH="userManage/userDetail.jsp";//用户详情页面地址
+	private static final String USERINFO_PATH="/jsp/book/myinfo.jsp";//用户首页详情页面地址
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -68,6 +68,9 @@ public class UserManageServlet extends HttpServlet {
 		case "detail":
 			datail(request,response);
 			break;
+		case "info":
+			info(request,response);
+			break;
 		}
 	}
 
@@ -78,7 +81,13 @@ public class UserManageServlet extends HttpServlet {
 		request.getRequestDispatcher(USERDETAIL_PATH).forward(request, response);
 		
 	}
+	private void info(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id=request.getParameter("id");
+		UserDao ud=new UserDaoImpl();
+		request.setAttribute("userInfo",ud.findUser(Integer.valueOf(id)));//这里回去是User对象
+		request.getRequestDispatcher(USERINFO_PATH).forward(request, response);
 
+	}
 	private void userBatDel(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ids=request.getParameter("ids");
 		UserDao ud=new UserDaoImpl();

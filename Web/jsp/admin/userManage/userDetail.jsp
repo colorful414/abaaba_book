@@ -74,8 +74,6 @@
 				</c:choose>
 			</div>
 		</div>
-		
-		
 	</div>
 </body>
 </html>
