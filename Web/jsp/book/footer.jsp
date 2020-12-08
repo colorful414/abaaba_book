@@ -76,7 +76,7 @@
 				</div>
 			</div>
 			<div class="footer_copyright text-center">
-				<span>Copyright (C) shine书城  2016-2017, All Rights Reserved</span>
+				<span>Copyright (C) 阿巴阿巴书城  2020-2021, All Rights Reserved</span>
 				<a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001051000098" class="footer_img" rel="nofollow">
 					<img src="images/book/validate.gif">
 				</a>

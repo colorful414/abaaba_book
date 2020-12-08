@@ -43,7 +43,7 @@
 
 
 	<h1 id="title">
-		shine书店后台管理系统&nbsp;<sup style="color: red;font-size:14px;"><%=application.getInitParameter("ver")%></sup>
+		阿巴阿巴书店后台管理系统&nbsp;<sup style="color: red;font-size:14px;"><%=application.getInitParameter("ver")%></sup>
 	</h1>
 	<div id="login">
 		<form action="jsp/admin/LoginServlet" method="post"

@@ -65,7 +65,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2 text-right">年龄</div>
-                    <div class="col-md-10">￥${userInfo.age}</div>
+                    <div class="col-md-10">${userInfo.age}</div>
                 </div>
                 <div class="row">
                     <div class="col-md-2 text-right">电话</div>
@@ -75,19 +75,6 @@
                     <div class="col-md-2 text-right">地址</div>
                     <div class="col-md-10">${userInfo.address}</div>
                 </div>
-<%--                <div class="row">--%>
-<%--                    <div class="col-md-2 text-right">启用状态</div>--%>
-<%--                    <div class="col-md-10">--%>
-<%--                        <c:choose>--%>
-<%--                            <c:when test="${i.enabled eq 'y'}">--%>
-<%--                                <span style="background:green;color:#fff">启用</span>--%>
-<%--                            </c:when>--%>
-<%--                            <c:otherwise>--%>
-<%--                                <span style="background:red;color:#fff">禁用</span>--%>
-<%--                            </c:otherwise>--%>
-<%--                        </c:choose>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
             </div>
         </div>
     </div>

@@ -30,6 +30,6 @@
 	</style>
 </head>
 <body>
-	<h2>欢迎-${adminUser.name}-登陆shine书店后台管理系统</h2>
+	<h2>欢迎-${adminUser.name}-登陆阿巴阿巴书店后台管理系统</h2>
 </body>
 </html>
