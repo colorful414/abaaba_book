@@ -6,6 +6,9 @@
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 	pageContext.setAttribute("basePath", basePath);
 %>
+<%request.setCharacterEncoding("gb2312");
+	//response.setContentType("text/html;charset=gb2312");pageEncoding="utf-8"
+%>
 <!DOCTYPE html>
 <html>
 <head>

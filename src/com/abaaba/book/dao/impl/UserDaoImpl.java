@@ -52,9 +52,9 @@ public class UserDaoImpl implements UserDao{
      */
     @Override
     public boolean userAdd(User user) {
-        String sql="insert into s_user(userName,passWord,name,sex,age,tell,address,enabled) values(?,?,?,?,?,?,?,?)";
+        String sql="insert into s_user(userName,userPassWord,name,sex,age,tell,address,enabled) values(?,?,?,?,?,?,?,?)";
 
-        int i= DbUtil.excuteUpdate(sql, user.getUserName(),user.getPassWord(),user.getName(),user.getSex(),user.getAge()
+        int i= DbUtil.excuteUpdate(sql, user.getUserName(),user.getUserPassWord(),user.getName(),user.getSex(),user.getAge()
                 ,user.getTell(),user.getAddress(),user.getEnabled());
 
         return i>0?true:false;
@@ -82,8 +82,8 @@ public class UserDaoImpl implements UserDao{
      */
     @Override
     public boolean userUpdate(User user) {
-        String sql="update s_user set passWord=?,name=?,sex=?,age=?,tell=?,address=?,enabled=? where userId =?";
-        int i=DbUtil.excuteUpdate(sql,user.getPassWord(),user.getName(),user.getSex(),user.getAge()
+        String sql="update s_user set userPassWord=?,name=?,sex=?,age=?,tell=?,address=?,enabled=? where userId =?";
+        int i=DbUtil.excuteUpdate(sql,user.getUserPassWord(),user.getName(),user.getSex(),user.getAge()
                 ,user.getTell(),user.getAddress(),user.getEnabled(),user.getUserId());
 
         return i>0?true:false;
@@ -112,7 +112,7 @@ public class UserDaoImpl implements UserDao{
     public User userLogin(User user) {
         User user1=null;
         String sql="select * from s_user where userName=? and userPassWord=?";
-        List<Map<String, Object>> list = DbUtil.executeQuery(sql, user.getUserName(),user.getPassWord());
+        List<Map<String, Object>> list = DbUtil.executeQuery(sql, user.getUserName(),user.getUserPassWord());
         if(list.size()>0) {
             Map<String, Object> map = list.get(0);
             user1=new User(map);

@@ -3,7 +3,7 @@ import java.util.Map;
 public class User {
     private int userId;         //用户编号
     private String userName;    //用户名
-    private String passWord;    //用户密码
+    private String userPassWord;    //用户密码
     private String name;		//用户姓名
     private String sex;         //用户性别
     private int age;            //用户年龄
@@ -15,18 +15,18 @@ public class User {
 
 
 
-    public User(String userName, String passWord) {
+    public User(String userName, String userPassWord) {
         super();
         this.userName = userName;
-        this.passWord = passWord;
+        this.userPassWord = userPassWord;
     }
 
 
 
-    public User(String userName, String passWord, String name, String sex, int age, String tell, String address) {
+    public User(String userName, String userPassWord, String name, String sex, int age, String tell, String address) {
         super();
         this.userName = userName;
-        this.passWord = passWord;
+        this.userPassWord = userPassWord;
         this.name = name;
         this.sex = sex;
         this.age = age;
@@ -40,11 +40,11 @@ public class User {
 
 
 
-    public User(int userId, String passWord, String name, String sex, int age, String tell, String address,
+    public User(int userId, String userPassWord, String name, String sex, int age, String tell, String address,
                 String enabled) {
         super();
         this.userId = userId;
-        this.passWord = passWord;
+        this.userPassWord = userPassWord;
         this.name = name;
         this.sex = sex;
         this.age = age;
@@ -58,7 +58,7 @@ public class User {
     public User(Map<String,Object> map) {
         userId=(int) map.get("userId");
         userName=(String) map.get("userName");
-        passWord=(String) map.get("passWord");
+        userPassWord=(String) map.get("userPassWord");
         name=(String) map.get("name");
         sex=(String) map.get("sex");
         age=(int) map.get("age");
@@ -83,12 +83,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getUserPassWord() {
+        return userPassWord;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setUserPassWord(String userPassWord) {
+        this.userPassWord = userPassWord;
     }
 
     public String getSex() {
@@ -143,7 +143,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [userId=" + userId + ", userName=" + userName + ", userPassWord=" + passWord + ", name=" + name
+        return "User [userId=" + userId + ", userName=" + userName + ", userPassWord=" + userPassWord + ", name=" + name
                 + ", sex=" + sex + ", age=" + age + ", tell=" + tell + ", address=" + address + ", enabled=" + enabled
                 + "]";
     }

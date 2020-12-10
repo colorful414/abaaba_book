@@ -4,6 +4,8 @@
 <%
 	String path = request.getContextPath();  
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	response.setContentType("text/html;charset=utf-8");
+	request.setCharacterEncoding("utf-8");
 %>
 <!DOCTYPE html>
 <html>

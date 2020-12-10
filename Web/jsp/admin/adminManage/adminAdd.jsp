@@ -4,6 +4,8 @@
 <%
 	String path = request.getContextPath();  
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	response.setContentType("text/html;charset=utf-8");
+	request.setCharacterEncoding("utf-8");
 %>
 <!DOCTYPE html>
 <html>
@@ -32,7 +34,7 @@
 	<div class="container">
 		
 		<h2 class="text-center">用户增加</h2>
-		<form id="myForm" action="jsp/admin/AdminManageServlet?action=add" method="post" class="form-horizontal"">
+		<form id="myForm" action="jsp/admin/AdminManageServlet?action=add" method="post" class="form-horizontal">
 				<div class="form-group">
 					<label for="userName" class="col-sm-2 col-sm-offset-2 control-label">用户名：</label>
 					<div class="col-sm-4">
