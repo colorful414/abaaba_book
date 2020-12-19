@@ -27,7 +27,7 @@ public class UserServlet extends HttpServlet {
 	private static final String REG_PATH="jsp/book/reg.jsp?type=reg";
 	private static final String INDEX_PATH="jsp/book/index.jsp";
 	private static final String LANDING="landing";				//前台用户session标识
-
+	private static final String USERINFO_PATH="/jsp/book/myinfo.jsp";//用户首页详情页面地址
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -57,7 +57,9 @@ public class UserServlet extends HttpServlet {
 		case "landstatus":
 			landstatus(request,response);
 			break;
-	
+		case "info":
+			info(request,response);
+			break;
 		}
 	}
 	
@@ -162,5 +164,11 @@ public class UserServlet extends HttpServlet {
 		}
 		
 	}
+	private void info(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id=request.getParameter("id");
+		UserDao ud=new UserDaoImpl();
+		request.setAttribute("userInfo",ud.findUser(Integer.valueOf(id)));//这里回去是User对象
+		request.getRequestDispatcher(USERINFO_PATH).forward(request, response);
 
+	}
 }

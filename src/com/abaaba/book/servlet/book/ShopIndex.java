@@ -39,8 +39,9 @@ public class ShopIndex extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/json");
-		response.setCharacterEncoding("utf-8");
+//		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/json;charset=UTF-8");
+
 
 		JSONObject json = new JSONObject();
 		

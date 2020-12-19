@@ -24,7 +24,7 @@
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
 									    <li><a href="OrderServlet?action=list" >我的订单</a></li>
-									    <li><a href="jsp/admin/UserManageServlet?action=info&id=${landing.userId}">我的资料</a></li>
+									    <li><a href="UserServlet?action=info&id=${landing.userId}">我的资料</a></li>
 									    <li><a style="border-top:1px #ccc solid" href="UserServlet?action=off" onClick="return confirm('确定要退出登陆了么？')">退 出 登 录</a></li>
 									</ul>
 								</div>
