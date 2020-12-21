@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <div class="head">
 			<div class="top">
 				<div class="container">
@@ -40,12 +41,14 @@
 						<span>阿巴阿巴网上书城</span>
 					</a>
 					<div class="search col-md-4">
-						<div class="input-group">
-	     	 				<input type="text" class="form-control" placeholder="输入要搜索的图书...">
-	      					<span class="input-group-btn">
-	       						<button class="btn btn-default" type="button">Go!</button>
-	      					</span>
-   						</div>
+						<form action="SearchList" method="GET">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="输入要搜索的图书..." name="bookName">
+								<span class="input-group-btn">
+									<input class="btn btn-default" type="submit" value="GO!">
+								</span>
+							</div>
+						</form>
 					</div>
 					<div class="shopcart col-md-2 col-md-offset-1">
 						<a id="cart" href="jsp/book/cart.jsp">
@@ -68,7 +71,7 @@
 				<div class="navbar">
 					<ul class="nav navbar-nav">
 				        <li class="active"><a href="jsp/book/index.jsp">首 页 <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">分 类</a></li>
+<%--						<li><a href="#">分 类</a></li>--%>
 						<li><a href="#">新 品</a></li>
 						<li><a href="#">特 惠</a></li>
 						<li><a href="#">热销榜</a></li>

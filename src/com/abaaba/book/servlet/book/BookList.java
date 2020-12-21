@@ -51,7 +51,6 @@ public class BookList extends HttpServlet {
 		if (page != null) {
 			curPage = Integer.parseInt(page);
 		}
-		
 		PageBean pb=null;
 		List<Book> bookList=new ArrayList<Book>();
 		String catalogIdStr = request.getParameter("catalogId");//获取有没有分类id，没有就是查全部

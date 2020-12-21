@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.abaaba.book.bean.Book;
-import com.abaaba.book.bean.Catalog;
 import com.abaaba.book.bean.PageBean;
-import com.abaaba.book.bean.UpLoadImg;
 import com.abaaba.book.dao.BookDao;
 import com.abaaba.book.util.DateUtil;
 import com.abaaba.book.util.DbUtil;
@@ -165,6 +163,15 @@ public class BookDaoImpl implements BookDao {
         List<Map<String, Object>> lm = DbUtil.executeQuery(sql, catalogId);
         return lm.size() > 0 ? (long) lm.get(0).get("count") : 0;
     }
+    /**
+     * 按搜索结果统计图书数量
+     */
+//    @Override
+//    public long bookSearchCount(int bookName) {
+//        String sql = "select count(*) as count from s_book where bookName=?";
+//        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, bookName);
+//        return lm.size() > 0 ? (long) lm.get(0).get("count") : 0;
+//    }
 
     /**
      * 按分类id获取图书列表
@@ -185,6 +192,37 @@ public class BookDaoImpl implements BookDao {
                 list.add(book);
             }
         }
+        return list;
+    }
+
+
+
+    /**
+     * 按搜索结果获取图书
+     */
+    @Override
+    public List<Book> bookSearch(String bookName) {
+        List<Book> list = new ArrayList<>();
+
+        String sql = "select * from view_book where bookName like '%" + bookName + "%'";
+        // 查询的分页结果集
+//        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, bookName,
+//                (pageBean.getCurPage() - 1) * pageBean.getMaxSize(), pageBean.getMaxSize());
+//
+//        // 把查询的book结果由List<Map<String, Object>>转换为List<Book>
+//        if (lm.size() > 0) {
+//            for (Map<String, Object> map : lm) {
+//                Book book = new Book(map);
+//                list.add(book);
+//            }
+//        }
+        List<Map<String, Object>> lm = DbUtil.executeQuery(sql);
+          if (lm.size() > 0) {
+            for (Map<String, Object> map : lm) {
+                Book book = new Book(map);
+                list.add(book);
+              }
+          }
         return list;
     }
 }
