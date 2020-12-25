@@ -25,12 +25,42 @@
 	<script type="text/javascript" src="js/book/landing.js"></script>
 	<link rel="stylesheet" href="css/book/index.css" />
 	<script type="text/javascript" src="js/book/addcart.js"></script>
-	<style type="text/css">
-		.dropdown-menu{
-			margin:0;
-		}
-	</style>
-
+	<!-- 轮播特效 -->
+    <style type="text/css">
+        .dropdown-menu{
+            margin:0;
+        }
+        .c-860 {
+            max-width: 900px;
+            height: 400px;
+            /*width: 100%;*/
+            /* z-index: 99999999; */
+        }
+        .c-860 img{
+            border-style:none;
+            border-radius: 15px !important;
+            vertical-align:top;
+            max-width:100%;
+            height:auto;
+        }
+        .c-860 a{
+            text-decoration:none;
+            color:#333;
+        }
+        .c-860  a:hover{
+            color:#ff7700;
+            text-decoration:none;
+        }
+    </style>
+	<link rel="stylesheet" href="banner/css/style.css" />
+	<script type='text/javascript' src='banner/js/modernizr.min.js?ver=2.6.1'></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var CSSettings = {"pluginPath":"banner"};
+		/* ]]> */
+	</script>
+	<script type='text/javascript' src='banner/js/cute.slider.js?ver=2.0.0'></script>
+	<script type='text/javascript' src='banner/js/cute.transitions.all.js?ver=2.0.0'></script>
 </head>
 <body>
 
@@ -38,42 +68,30 @@
 		<%@include file="header.jsp" %>
 		<div class="wrapper">
 			<!-- banner start -->
-			<div class="banner">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<img src="images/book/banner1.jpg" alt="...">
-						</div>
-						<div class="item">
-							<img src="images/book/banner2.jpg" alt="...">
-						</div>
-						<div class="item">
-							<img src="images/book/banner3.jpg" alt="...">
-						</div>
-						<div class="item">
-							<img src="images/book/banner4.jpg" alt="...">
-						</div>
-						<div class="item">
-							<img src="images/book/banner5.jpg" alt="...">
-						</div>
+			<div class="c-860 c-demoslider">
+				<div id="cuteslider_3_wrapper" class="cs-circleslight">
+					<div id="cuteslider_3" class="cute-slider" data-width="960" data-height="420" data-overpause="true">
+						<ul data-type="slides">
+							<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr29,tr27,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13,tr45" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="banner/001/白夜行.jpg" data-thumb="images/001/白夜行 - 副本.jpg"></li>
+							<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="banner/bg/blank.png" data-src="banner/001/我不喜欢这个世界.jpg" data-thumb="banner/001/我不喜欢这个世界 - 副本.jpg"></li>
+							<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="banner/bg/blank.png" data-src="banner/001/白夜行.jpg" data-thumb="banner/001/白夜行 - 副本.jpg"></li>
+							<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="banner/bg/blank.png" data-src="banner/001/解忧杂货铺.jpg" data-thumb="banner/001/解忧杂货铺 - 副本.jpg"></li>
+							<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="banner/bg/blank.png" data-src="banner/001/我只喜欢你.jpg" data-thumb="banner/001/我只喜欢你 - 副本.jpg"></li>
+							<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="banner/bg/blank.png" data-src="banner/001/海边的卡夫卡.jpg" data-thumb="banner/001/海边的卡夫卡 - 副本.jpg"></li>
+						</ul>
+						<ul data-type="controls"> <!-- 显示控制功能 -->
+							<li data-type="captions"></li>  <!-- 显示文字信息 -->
+							<li data-type="link"></li> <!-- 显示链接 -->
+							<li data-type="video"></li>  <!-- 显示视频 -->
+							<li data-type="slideinfo"></li>  <!-- 显示文字信息 -->
+							<li data-type="circletimer"></li> <!-- 显示圆形时间进度条 -->
+							<li data-type="previous"></li>  <!-- 显示上一张按钮 -->
+							<li data-type="next"> </li>  <!-- 显示下一张按钮 -->
+							<li data-type="bartimer"></li>  <!-- 显示底部时间进度条 bartimer | previous -->
+							<li data-type="slidecontrol" data-thumb="true" data-thumbalign="up"></li>
+						</ul>
 					</div>
-				
-				    <!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					</a>
-					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					</a>
+					<div class="cute-shadow"><img src="banner/bg/shadow.png" alt="shadow"></div>
 				</div>
 			</div>
 			<!-- main start -->
@@ -129,5 +147,21 @@
 	  	</div>
 	</div>
 	<!--弹窗盒子end -->
+	<!-- 轮播特效 -->
+	<script type="text/javascript">
+		var cuteslider3 = new Cute.Slider();
+		cuteslider3.setup("cuteslider_3", "cuteslider_3_wrapper", "banner/css/slider-style.css");
+		cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_START,
+				function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_END,
+				function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.WATING,
+				function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_NEXT_SLIDE,
+				function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.WATING_FOR_NEXT,
+				function(event) {});
+	</script>
+	<!-- 轮播特效结束 -->
 </body>
 </html>

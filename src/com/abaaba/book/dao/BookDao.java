@@ -12,12 +12,15 @@ public interface BookDao {
 
     // 按分类获取图书数量
     long bookReadCount(int catalogId);
-
+//    // 按分类获取图书数量
+//    long bookSortCount(int num);
 //    long bookSearchCount(int bookName);
     // 按分类获取图书分页列表(视图)
     List<Book> bookList(PageBean pageBean, int catalogId);
     // 获取搜索图书(视图)
     List<Book> bookSearch(String bookName);
+    // 获取新品图书(视图)
+    List<Book> newBook(int num);
     // 增加图书
     boolean bookAdd(Book book);
 
@@ -44,6 +47,7 @@ public interface BookDao {
 
     // 获取指定数量新添加的图书
     List<Book> newBooks(int num);
+
 
 
 }

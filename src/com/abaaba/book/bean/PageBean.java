@@ -20,6 +20,13 @@ public class PageBean {
         updatePage();
     }
 
+//    public PageBean(int curPage, int maxSize) {
+//        super();
+//        this.curPage = curPage;
+//        this.maxSize = maxSize;
+//        updatePage();
+//    }
+
     public int getCurPage() {
         return curPage;
     }

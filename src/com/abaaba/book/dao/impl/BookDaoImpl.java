@@ -164,6 +164,15 @@ public class BookDaoImpl implements BookDao {
         return lm.size() > 0 ? (long) lm.get(0).get("count") : 0;
     }
     /**
+     * 按分类页面统计图书数量
+     */
+//    @Override
+//    public long bookSortCount(int num) {
+//        String sql = "select count(*) as count from s_book ";
+//        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, num);
+//        return lm.size() > 0 ? (long) lm.get(0).get("count") : 0;
+//    }
+    /**
      * 按搜索结果统计图书数量
      */
 //    @Override
@@ -223,6 +232,21 @@ public class BookDaoImpl implements BookDao {
                 list.add(book);
               }
           }
+        return list;
+    }
+    // 查询最新上架的书
+    @Override
+    public List<Book> newBook(int num) {
+        List<Book> list = new ArrayList<>();
+        String sql = "SELECT * FROM view_book ORDER BY addTime desc limit 0,?";
+        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, num);
+        // 把查询的book结果由List<Map<String, Object>>转换为List<Book>
+        if (lm.size() > 0) {
+            for (Map<String, Object> map : lm) {
+                Book book = new Book(map);
+                list.add(book);
+            }
+        }
         return list;
     }
 }

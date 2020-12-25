@@ -4,12 +4,12 @@
 <div class="head">
 			<div class="top">
 				<div class="container">
-					<div class="pull-right">|
+					<div class="pull-right top-right2">|
 						<a href="#">服务中心</a>
 						<a href="#">网站地图</a>
 						</div>
 					
-					<div class="pull-right">
+					<div class="pull-right top-right">
 						<c:choose>
 							<c:when test="${empty landing}">
 								<div class="top-right">
@@ -72,7 +72,7 @@
 					<ul class="nav navbar-nav">
 				        <li class="active"><a href="jsp/book/index.jsp">首 页 <span class="sr-only">(current)</span></a></li>
 <%--						<li><a href="#">分 类</a></li>--%>
-						<li><a href="#">新 品</a></li>
+						<li><a href="SortServlet?action=newBook">新 品</a></li>
 						<li><a href="#">特 惠</a></li>
 						<li><a href="#">热销榜</a></li>
 			      	</ul>
