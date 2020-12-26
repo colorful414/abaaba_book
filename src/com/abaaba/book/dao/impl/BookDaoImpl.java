@@ -249,4 +249,19 @@ public class BookDaoImpl implements BookDao {
         }
         return list;
     }
+    // 查询最优惠的书
+    @Override
+    public List<Book> preBook(int num) {
+        List<Book> list = new ArrayList<>();
+        String sql = "SELECT * FROM view_book ORDER BY price asc limit 0,?";
+        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, num);
+        // 把查询的book结果由List<Map<String, Object>>转换为List<Book>
+        if (lm.size() > 0) {
+            for (Map<String, Object> map : lm) {
+                Book book = new Book(map);
+                list.add(book);
+            }
+        }
+        return list;
+    }
 }

@@ -73,7 +73,7 @@
 				        <li class="active"><a href="jsp/book/index.jsp">首 页 <span class="sr-only">(current)</span></a></li>
 <%--						<li><a href="#">分 类</a></li>--%>
 						<li><a href="SortServlet?action=newBook">新 品</a></li>
-						<li><a href="#">特 惠</a></li>
+						<li><a href="SortServlet?action=preference">特 惠</a></li>
 						<li><a href="#">热销榜</a></li>
 			      	</ul>
 				</div>

@@ -21,6 +21,8 @@ public interface BookDao {
     List<Book> bookSearch(String bookName);
     // 获取新品图书(视图)
     List<Book> newBook(int num);
+    // 获取优惠图书(视图)
+    List<Book> preBook(int num);
     // 增加图书
     boolean bookAdd(Book book);
 
