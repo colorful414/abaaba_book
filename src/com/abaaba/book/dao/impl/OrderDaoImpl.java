@@ -6,7 +6,6 @@ import java.util.Map;
 
 import com.abaaba.book.bean.Order;
 import com.abaaba.book.bean.PageBean;
-import com.abaaba.book.bean.User;
 import com.abaaba.book.dao.OrderDao;
 import com.abaaba.book.util.DbUtil;
 
@@ -129,4 +128,11 @@ public class OrderDaoImpl implements OrderDao {
         int i = DbUtil.excuteUpdate(sql, status,orderId);
         return i>0?true:false;
     }
+
+//    @Override
+//    public int orderSell(int bookId, int quantity) {
+//        String sql="select quantity from view_order where bookId=?";
+//        int i = DbUtil.excuteUpdate(sql, bookId,quantity);
+//        return i;
+//    }
 }

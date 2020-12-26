@@ -212,19 +212,7 @@ public class BookDaoImpl implements BookDao {
     @Override
     public List<Book> bookSearch(String bookName) {
         List<Book> list = new ArrayList<>();
-
         String sql = "select * from view_book where bookName like '%" + bookName + "%'";
-        // 查询的分页结果集
-//        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, bookName,
-//                (pageBean.getCurPage() - 1) * pageBean.getMaxSize(), pageBean.getMaxSize());
-//
-//        // 把查询的book结果由List<Map<String, Object>>转换为List<Book>
-//        if (lm.size() > 0) {
-//            for (Map<String, Object> map : lm) {
-//                Book book = new Book(map);
-//                list.add(book);
-//            }
-//        }
         List<Map<String, Object>> lm = DbUtil.executeQuery(sql);
           if (lm.size() > 0) {
             for (Map<String, Object> map : lm) {
@@ -254,6 +242,21 @@ public class BookDaoImpl implements BookDao {
     public List<Book> preBook(int num) {
         List<Book> list = new ArrayList<>();
         String sql = "SELECT * FROM view_book ORDER BY price asc limit 0,?";
+        List<Map<String, Object>> lm = DbUtil.executeQuery(sql, num);
+        // 把查询的book结果由List<Map<String, Object>>转换为List<Book>
+        if (lm.size() > 0) {
+            for (Map<String, Object> map : lm) {
+                Book book = new Book(map);
+                list.add(book);
+            }
+        }
+        return list;
+    }
+    // 查询最畅销的书
+    @Override
+    public List<Book> bestBook(int num) {
+        List<Book> list = new ArrayList<>();
+        String sql = "SELECT view_book.* FROM view_book,view_order WHERE view_book.bookId=view_order.bookId  ORDER BY view_order.quantity desc limit 0,?";
         List<Map<String, Object>> lm = DbUtil.executeQuery(sql, num);
         // 把查询的book结果由List<Map<String, Object>>转换为List<Book>
         if (lm.size() > 0) {

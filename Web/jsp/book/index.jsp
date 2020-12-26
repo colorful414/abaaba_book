@@ -51,6 +51,17 @@
             color:#ff7700;
             text-decoration:none;
         }
+		.head .top .top-right{
+			display:inline;
+			float: right;
+			/*position: absolute;*/
+			margin-top: -30px;
+			padding-left: 100px;
+		}
+		.head .top .top-right2{
+			margin-top: -40px;
+
+		}
     </style>
 	<link rel="stylesheet" href="banner/css/style.css" />
 	<script type='text/javascript' src='banner/js/modernizr.min.js?ver=2.6.1'></script>

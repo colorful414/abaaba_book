@@ -3,7 +3,7 @@ import java.util.List;
 
 import com.abaaba.book.bean.Order;
 import com.abaaba.book.bean.PageBean;
-import com.abaaba.book.bean.User;
+
 public interface OrderDao {
     //增加一个订单记录
     boolean orderAdd(Order order);
@@ -26,4 +26,7 @@ public interface OrderDao {
 
     //更改订单状态
     boolean orderStatus(int orderId,int status);
+//    //查询销量
+//    int orderSell(int bookId, int quantity);
+
 }

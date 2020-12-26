@@ -23,6 +23,8 @@ public interface BookDao {
     List<Book> newBook(int num);
     // 获取优惠图书(视图)
     List<Book> preBook(int num);
+    // 获取优惠图书(视图)
+    List<Book> bestBook(int num);
     // 增加图书
     boolean bookAdd(Book book);
 
