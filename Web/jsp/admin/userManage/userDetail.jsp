@@ -67,7 +67,7 @@
 			<div class="col-md-2 text-right">启用状态</div>
 			<div class="col-md-10">
 				<c:choose>
-					<c:when test="${i.enabled eq 'y'}">
+					<c:when test="${userInfo.enabled eq 'y'}">
 						<span style="background:green;color:#fff">启用</span>
 					</c:when>
 					<c:otherwise>

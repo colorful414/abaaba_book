@@ -6,7 +6,6 @@
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 	pageContext.setAttribute("basePath", basePath);
 	request.setCharacterEncoding("UTF-8");
-
 %>
 <%--java.net.URLDecoder.decode(request.getParameter("tag"),"UTF-8");--%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>

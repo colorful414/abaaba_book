@@ -16,10 +16,11 @@
 	<script type="text/javascript" src="bs/js/bootstrap.js"></script>
 	<link rel="stylesheet" href="css/admin/header.css">
 	<style type="text/css">
-		
+
 	</style>
 </head>
 <body>
+
 	<div class="header container-fluid">
 		<a class="title" href="jsp/admin/main.jsp" target="rFrame">阿巴阿巴书店后台管理系统</a>
 		<div class="btn-group adminName">
@@ -47,5 +48,8 @@
 	$(".adminName").mouseout(function(){
 		$(".dropdown-menu").css("display","none");
 	})
+</script>
+<script type="text/javascript">
+
 </script>
 </html>
