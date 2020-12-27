@@ -125,6 +125,7 @@ public class UserManageServlet extends HttpServlet {
 				request.getParameter("tell"),
 				request.getParameter("address"),
 				request.getParameter("enabled"));
+
 		UserDao ud=new UserDaoImpl();
 		if(ud.userUpdate(user)) {
 			request.setAttribute("userMessage", "用户更新成功");
