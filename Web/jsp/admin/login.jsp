@@ -47,7 +47,7 @@
 	</h1>
 	<div id="login">
 		<form action="jsp/admin/LoginServlet" method="post"
-			onsubmit="javascript:return checkForm()">
+			onsubmit="return checkForm()">
 			<p>
 				<input type="text" name="userName" id="userName" placeholder="用户名">
 			</p>

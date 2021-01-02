@@ -8,7 +8,6 @@ function addToCart(bookId){
 		success:function(data){
 			$("#cart .num").html(data);
 		}
-			
 	})
 }
 

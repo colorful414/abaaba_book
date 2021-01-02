@@ -7,7 +7,7 @@
 	pageContext.setAttribute("basePath", basePath);
 	request.setCharacterEncoding("UTF-8");
 %>
-<%--java.net.URLDecoder.decode(request.getParameter("tag"),"UTF-8");--%>
+
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -71,9 +71,31 @@
 	</script>
 	<script type='text/javascript' src='banner/js/cute.slider.js?ver=2.0.0'></script>
 	<script type='text/javascript' src='banner/js/cute.transitions.all.js?ver=2.0.0'></script>
+<%--	背景特效--%>
+	<script type='text/javascript' src='js/book/snow.js'></script>
+	<style type="text/css">
+        .container-fullid{
+            background-color: wheat;
+            /*background-image: url("../../images/bg.jpg");*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+            /*border-image-repeat: repeat;*/
+        }
+		.snow-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 100001;
+		}
+	</style>
+<%--	旋转圆盘导航特效--%>
+	<link href="css/topbar.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
+<div class="snow-container"></div>
 	<div class="container-fullid">
 		<%@include file="header.jsp" %>
 		<div class="wrapper">

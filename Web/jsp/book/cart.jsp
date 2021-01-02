@@ -44,9 +44,31 @@
 	border-radius: 3px;
 }
 </style>
-
+	<%--	背景特效--%>
+	<script type='text/javascript' src='js/book/snow.js'></script>
+	<style type="text/css">
+		.container-fullid{
+			background-color: wheat;
+			/*background-image: url("../../images/bg.jpg");*/
+			/*width: 100%;*/
+			/*height: 100%;*/
+			/*border-image-repeat: repeat;*/
+		}
+		.snow-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 100001;
+		}
+	</style>
+	<%--	旋转圆盘导航特效--%>
+	<link href="css/topbar.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<div class="snow-container"></div>
 	<c:if test="${!empty suberr}">
 		<script type="text/javascript">
 			alert("${suberr}")
@@ -62,7 +84,6 @@
 				</h3>
 				<div class="content table-responsive">
 					<table class="table">
-						
 						<c:choose>
 							<c:when test="${!empty shopCart}">
 								<tr class="info row">
@@ -280,16 +301,15 @@
 		}
 		//去结算处理
 		$("#tosettle").click(function(){
-			$.get("UserServlet?action=landstatus",function(data){
-				if(data.status=="y"){
-					window.location.href="${basePath}jsp/book/conorder.jsp";
-				}else{
-					$("#myModal").modal("show");
-				}
-			},"json")
-			
-			return;
-		})
+		$.get("UserServlet?action=landstatus",function(data){
+			if(data.status=="y"){
+				window.location.href="${basePath}jsp/book/conorder.jsp";
+			}else{
+				$("#myModal").modal("show");
+			}
+		},"json")
+		return;
+	})
 		//登陆处理
 		$("#loginForm").submit(function(){
 			$.post("UserServlet?action=ajlogin", $('#loginForm').serialize(),function(data){

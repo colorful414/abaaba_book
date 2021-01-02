@@ -64,24 +64,24 @@ a:hover{
 	font-size:14px;
 	background-color:red;
 }
-.head .navbar{
-	margin:10px 0 0 0;
-	min-height: 43px;
-	
-}
-.head .navbar .nav li{
-	border-bottom: 0;
-}
-.head .navbar .nav a{
-	padding:10px 25px;
-	font-size: 22px;
-	border-bottom: 2px #fff solid;
-	
-}
-.head .navbar .nav li a:hover,.head .navbar .active{
-	border-bottom:2px rgb(215, 0, 109) solid;
-	background:rgba(215, 0, 109,0.1);
-}
+/*.head .navbar{*/
+/*	margin:10px 0 0 0;*/
+/*	min-height: 43px;*/
+/*	*/
+/*}*/
+/*.head .navbar .nav li{*/
+/*	border-bottom: 0;*/
+/*}*/
+/*.head .navbar .nav a{*/
+/*	padding:10px 25px;*/
+/*	font-size: 22px;*/
+/*	border-bottom: 2px #fff solid;*/
+/*	*/
+/*}*/
+/*.head .navbar .nav li a:hover,.head .navbar .active{*/
+/*	border-bottom:2px rgb(215, 0, 109) solid;*/
+/*	background:rgba(215, 0, 109,0.1);*/
+/*}*/
 
 
 /* footer */

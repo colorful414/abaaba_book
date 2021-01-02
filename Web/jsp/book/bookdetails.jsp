@@ -52,9 +52,31 @@
 		}
 		
 	</style>
+	<%--	背景特效--%>
+	<script type='text/javascript' src='js/book/snow.js'></script>
+	<style type="text/css">
+		.container-fullid{
+			background-color: wheat;
+			/*background-image: url("../../images/bg.jpg");*/
+			/*width: 100%;*/
+			/*height: 100%;*/
+			/*border-image-repeat: repeat;*/
+		}
+		.snow-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 100001;
+		}
+	</style>
+	<%--	旋转圆盘导航特效--%>
+	<link href="css/topbar.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
+<div class="snow-container"></div>
 	<div class="container-fullid">
 		<%@include file="header.jsp" %>
 		<div class="wrapper">
@@ -102,27 +124,22 @@
 								</tr>
 								<tr>
 									<td>服务：</td>
-									<td>由 shine书城 发货,并提供售后服务,预计三天内送达，我们会全力加快为您服务，谢谢！</td>
+									<td>由阿巴阿巴书城发货,并提供售后服务,预计三天内送达，我们会全力加快为您服务，谢谢！</td>
 								</tr>
 							</table>
 						<p class="buy_pro">
-								<a class="btn btn-info" href="#">立即购买</a>
+								<a id="tosettle" class="btn btn-info" onclick="payfor(${bookInfo.bookId})">立即购买</a>
 								<button type="button" class="btn btn-danger" onclick="addToCart(${bookInfo.bookId})" data-toggle="modal" data-target=".bs-example-modal-sm">加入购物车</button>
 						</p>
 						<p>温馨提示：支持7天无理由退货</p>
 					</div>
-					
 				</div>
 				<div class="row pro_desc">
 					<h3>图书简介</h3>
 					<div>${bookInfo.description}</div>
 				</div>
-				
 			</div>
-			
-			
 		</div>
-								
 		<%@include file="footer.jsp" %>
 	</div>
 <!--弹窗盒子start -->
@@ -132,7 +149,6 @@
     		<div class="modal-body" style="color:green;font-size:24px;">
 			  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp商品已成功加入购物车！
 			</div>
-    			
       		<div class="modal-footer">
       			<a href="javascript:void(0)" type="button" class="btn btn-default" data-dismiss="modal">返回继续购物</a>
 		        <a href="jsp/book/cart.jsp" type="button" class="btn btn-success">立即去结算</a>
@@ -142,4 +158,19 @@
 </div>
 <!--弹窗盒子end -->
 </body>
+<script>
+	function payfor(bookId){
+		$.ajax({
+			url:"CartServlet?action=add",
+			dataType:"json",
+			async:true,
+			data:{"bookId":bookId},
+			type:"POST",
+			success:function(data){
+				$("#cart .num").html(data);
+				window.location.href="${basePath}jsp/book/conorder.jsp";
+			}
+		})
+	}
+</script>
 </html>

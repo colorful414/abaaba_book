@@ -68,14 +68,25 @@
 						</a>
 					</div>
 				</div>
-				<div class="navbar">
-					<ul class="nav navbar-nav">
-				        <li class="active"><a href="jsp/book/index.jsp">首 页 <span class="sr-only">(current)</span></a></li>
-<%--						<li><a href="#">分 类</a></li>--%>
-						<li><a href="SortServlet?action=newBook">新 品</a></li>
-						<li><a href="SortServlet?action=preference">特 惠</a></li>
-						<li><a href="SortServlet?action=bestSell">热销榜</a></li>
-			      	</ul>
+<%--				<div class="navbar">--%>
+<%--					<ul class="nav navbar-nav">--%>
+<%--				        <li class="active"><a href="jsp/book/index.jsp">首 页 <span class="sr-only">(current)</span></a></li>--%>
+<%--&lt;%&ndash;						<li><a href="#">分 类</a></li>&ndash;%&gt;--%>
+<%--						<li><a href="SortServlet?action=newBook">新 品</a></li>--%>
+<%--						<li><a href="SortServlet?action=preference">特 惠</a></li>--%>
+<%--						<li><a href="SortServlet?action=bestSell">热销榜</a></li>--%>
+<%--			      	</ul>--%>
+<%--				</div>--%>
+				<div class="demo">
+					<div class="navbar">导航
+						<ul class="menu">
+							<li class="active"><a href="jsp/book/index.jsp">首 页 <span class="sr-only">(current)</span></a></li>
+							<%--						<li><a href="#">分 类</a></li>--%>
+							<li><a href="SortServlet?action=newBook">新 品</a></li>
+							<li><a href="SortServlet?action=preference">特 惠</a></li>
+							<li><a href="SortServlet?action=bestSell">热销榜</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

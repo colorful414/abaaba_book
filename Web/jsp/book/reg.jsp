@@ -26,9 +26,31 @@
 	<script type="text/javascript" src="js/book/landing.js"></script>
 	<link href="css/book/head_footer.css" rel="stylesheet" type="text/css">
 	<link href="css/book/user_reg_login.css" rel="stylesheet" type="text/css">
-	
+	<%--	背景特效--%>
+	<script type='text/javascript' src='js/book/snow.js'></script>
+	<style type="text/css">
+		.container-fullid{
+			background-color: wheat;
+			/*background-image: url("../../images/bg.jpg");*/
+			/*width: 100%;*/
+			/*height: 100%;*/
+			/*border-image-repeat: repeat;*/
+		}
+		.snow-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 100001;
+		}
+	</style>
+	<%--	旋转圆盘导航特效--%>
+	<link href="css/topbar.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<div class="snow-container"></div>
 <c:if test="${!empty infoList}">
 	<c:forEach items="${infoList}" var="i">
 		<script type="text/javascript">
